@@ -11,7 +11,7 @@ function App() {
   const [numClics, setNumClics] = useState(0); //a esos valores le asignamos el valor retornado de useState, le pasamos el valor inicial del contador
 
   //contador automatico
-  const [contadorAutomatico, setContadorAutomatico] = useState(0);
+  const [contadorAutomatico, setContadorAutomatico] = useState(10);
 
   //Habilitar y deshabilitar los botones de click
   const [botonesDeshabilitados, setBotonesDeshabilitados] = useState(false);
@@ -32,8 +32,8 @@ function App() {
 
   const reiniciarContador = () => {
     setNumClics(0);
-    //Para la funcionalidad de deshabilitar los botones cuando llegue a 30 seg
-    setContadorAutomatico(0);
+    //Para la funcionalidad de deshabilitar los botones cuando llegue a 10 seg
+    setContadorAutomatico(10);
     setBotonesDeshabilitados(false);
   };
 
@@ -41,15 +41,15 @@ function App() {
   //Para el contador automatico
   useEffect(() => {
 
-    if (contadorAutomatico >= 10) {
+    if (contadorAutomatico <= 0) {
       setBotonesDeshabilitados(true);
     } else {
       setBotonesDeshabilitados(false);
     }
 
     const interval = setInterval(() => {
-      if (contadorAutomatico < 10) {
-        setContadorAutomatico(contadorAutomatico + 1);
+      if (contadorAutomatico > 0) {
+        setContadorAutomatico(contadorAutomatico - 1);
       }
     }, 1000);
 
