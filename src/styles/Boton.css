@@ -1,0 +1,30 @@
+button{
+  margin: 10px;
+  width: 250px;
+  height: 80px;
+  font-size: 35px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+
+}
+
+button:hover{
+  background-color: #00744d;
+}
+
+.boton-sumar{
+background-color: rgb(66, 105, 212);
+}
+
+.boton-restar{
+background-color: rgb(255, 119, 119);
+}
+
+.boton-reiniciar{
+background-color: rgb(112, 112, 112);
+}
