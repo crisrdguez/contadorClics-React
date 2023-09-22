@@ -1,4 +1,33 @@
-.contador{
+.contador {
+  min-width: 100%;
+  font-size: 8vw;
+  padding: 2%;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid aliceblue;
+  margin-bottom: 15px;
+}
+
+
+/* Estilos adicionales para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .contador {
+    font-size: 160px; /* Vuelve al tamaño original en pantallas más grandes */
+    min-width: 300px; /* Ancho mínimo en pantallas más grandes */
+  }
+}
+
+
+
+
+
+
+
+
+
+/*.contador{
   min-width: 300px;
   height: 300px;
   font-size: 160px;
@@ -9,4 +38,4 @@
   justify-content: center;
   border: 8px solid aliceblue;
   margin-bottom: 15px;
-}
+}*/

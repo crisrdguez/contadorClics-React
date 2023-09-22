@@ -1,8 +1,16 @@
+/* Estilos base para botones */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Los botones estarán uno al lado del otro */
+}
+
 button{
   margin: 10px;
-  width: 250px;
-  height: 80px;
-  font-size: 35px;
+  flex: 1; /* Para que los botones se expandan igualmente */
+  height: 70px;
+  padding: 10px;
+  font-size: 2vw;
   font-family: sans-serif;
   font-weight: bold;
   color: white;
@@ -27,4 +35,17 @@ background-color: rgb(255, 119, 119);
 
 .boton-reiniciar{
 background-color: rgb(112, 112, 112);
+}
+
+/* Estilos para pantallas más pequeñas (botones apilados) */
+@media screen and (max-width: 768px) {
+  .button-container {
+    flex-direction: column; /* Los botones se apilarán uno encima del otro */
+  }
+
+  button {
+    flex: none; /* Los botones no se expandirán en pantallas pequeñas */
+    width: 100%; /* Los botones ocuparán todo el ancho disponible */
+    font-size: 4vw; /* Tamaño de fuente relativo más pequeño para pantallas pequeñas */
+  }
 }

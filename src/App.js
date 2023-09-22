@@ -67,15 +67,15 @@ function App() {
 
         <Contador numClics={numClics} />
         <h1 className='contador-automatico'>Contador Automático: {contadorAutomatico} segundos</h1>
-
+        <div className='button-container'>
         <Boton 
-          texto='Clic +'
+          texto='Clic+'
           esBotonDeClic={true}
           esBotonSuma={true}
           manejarClic={manejarClicSuma}//asigna la funcion manejarClicSuma al propot manjeraClic
         />
         <Boton 
-          texto='Clic -'
+          texto='Clic-'
           esBotonDeClic={true}
           esBotonSuma={false}
           manejarClic={manejarClicResta}//asigna la funcion manejarClicResta al propot manjeraClic
@@ -86,6 +86,7 @@ function App() {
           esBotonSuma={false}
           manejarClic={reiniciarContador}//asigna la funcion reiniciarContador al propot manjeraClic
         />
+        </div>
       </div>
       
     </div>
